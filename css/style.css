@@ -1,7 +1,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  background: #030a03;
+  background:#000000;;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -65,13 +65,14 @@ body {
 }
 
 #terminal {
-  width: 100%;
-  border: 1px solid #00ff41;
-  padding: 24px 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  box-shadow: 0 0 12px #00ff4120;
+    background: #030a03;
+    width: 100%;
+    border: 1px solid #00ff41;
+    padding: 24px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 0 12px #00ff4120;
 }
 
 #terminal p {
@@ -101,7 +102,7 @@ body {
 
 #connect-btn {
   background: transparent;
-  border: 2px solid #00ff41;
+  border: 1.5px solid #00ff41;
   color: #00ff41;
   font-family: 'Courier New', monospace;
   font-size: 13px;
@@ -110,10 +111,11 @@ body {
   cursor: pointer;
   box-shadow: 0 0 10px #00ff4130;
   opacity: 0;
-  transition: opacity 0.6s, background 0.2s, box-shadow 0.2s;
+  transition: opacity 0.2s, background 0.2s, box-shadow 0.2s;
 }
 
 #connect-btn:hover {
-  background: #00ff4112;
-  box-shadow: 0 0 20px #00ff4150;
+    transition: 0.2s ;
+    background: #00ff4112;
+    box-shadow: 0 0 30px #00ff644d;
 }
