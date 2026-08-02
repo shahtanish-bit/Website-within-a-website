@@ -133,14 +133,21 @@ body {
 }
 
 .classified-file {
-  margin: 0 20px;
-  padding: 10px 12px;
-  font-size: 12px;
-  font-family: 'Courier New', monospace;
-  color: #b94040;
-  letter-spacing: 1px;
-  cursor: pointer;
-  border: 1px dashed #6b2020;
+	margin: 0 20px;
+    padding: 8px 10px;
+    font-size: 10px;
+    font-family: 'Courier New', monospace;
+    color: #b94040;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: 1px dashed #6b2020;
+    justify-self: center;
+    font-weight: 800;
+    transition: 0.2s;
+}
+
+.classified-file:hover{
+	background: #cc333314;
 }
 
 
@@ -238,4 +245,103 @@ body {
 .tag.unknown {
   background-color: #cac6ba;
   color: #3a3830;
+}
+
+
+
+
+
+
+
+
+.classified-record {
+  display: flex;
+  gap: 28px;
+  padding: 28px 0;
+  border: 1.5px dashed #cc33338a;
+  background-color: #ff222212;
+  margin: 43px 0 20px 0;
+}
+
+.classified-record:has(+ .classified-record) {
+  margin-bottom: 0;
+}
+
+.classified-record + .classified-record {
+  margin-top: 0;
+  border-top: none;
+}
+
+.classified-record.hidden {
+  display: none;
+}
+
+.classified-record-inner {
+  display: flex;
+  gap: 28px;
+  width: 100%;
+}
+
+.classified-title-bar {
+  height: 18px;
+  background-color: #b94040;
+  width: 260px;
+  margin-bottom: 8px;
+}
+
+.redacted {
+  display: inline-block;
+  background-color: #1e1a12;
+  color: #1e1a12;
+  user-select: none;
+  border-radius: 1px;
+  line-height: 1.2;
+}
+
+.tag.active-tag {
+  background-color: #aecab4;
+  color: #1e4030;
+}
+
+
+.achievement {
+  position: fixed;
+  top: 14px;
+  right: -320px;
+  background-color: #1e1a12;
+  border: 1px solid #b8960a;
+  border-radius: 6px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 280px;
+  z-index: 200;
+  transition: right 0.4s ease;
+}
+
+.achievement.visible {
+  right: 20px;
+}
+
+.achievement-icon {
+  font-size: 28px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.achievement-label {
+  font-family: 'Courier New', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #b8960a;
+  margin-bottom: 4px;
+}
+
+.achievement-title {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: #e8e0cc;
+  font-weight: bold;
+  line-height: 1.4;
 }

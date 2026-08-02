@@ -37,13 +37,18 @@ function init() {
   setTimeout(showToast, linesFinishedAt + TOAST_DELAY_AFTER_LINES);
 }
 
-init();
+if (toast) init();
+
+
+
+
+
+
 
 
 
 
 // js for google page
-
 
 const results = [
   {
@@ -91,11 +96,55 @@ function showResults(query) {
   });
 }
 
-document.getElementById('search-btn').addEventListener('click', () => {
-  const q = document.getElementById('search-input').value.trim();
-  if (q) showResults(q);
-});
+const searchBtn = document.getElementById('search-btn');
+const searchInput = document.getElementById('search-input');
 
-document.getElementById('search-input').addEventListener('keydown', e => {
-  if (e.key === 'Enter' && e.target.value.trim()) showResults(e.target.value.trim());
-});
+if (searchBtn) {
+  searchBtn.addEventListener('click', () => {
+    const q = searchInput.value.trim();
+    if (q) showResults(q);
+  });
+}
+
+if (searchInput) {
+  searchInput.addEventListener('keydown', e => {
+    if (e.key === 'Enter' && e.target.value.trim()) showResults(e.target.value.trim());
+  });
+}
+
+
+
+
+
+
+
+// for da error popupp on the archive web
+
+const classifiedFile = document.querySelector('.classified-file');
+const classifiedRecord = document.getElementById('classified-record');
+const records = document.querySelector('.records');
+const achievement = document.getElementById('achievement');
+
+let achievementTimer = null;
+
+if (classifiedFile) {
+  classifiedFile.addEventListener('click', () => {
+
+    const clone = classifiedRecord.cloneNode(true);
+    clone.classList.remove('hidden');
+    clone.removeAttribute('id');
+    records.insertBefore(clone, records.firstChild);
+
+    showAchievement();
+  });
+}
+
+function showAchievement() {
+  if (achievementTimer) clearTimeout(achievementTimer);
+
+  achievement.classList.add('visible');
+
+  achievementTimer = setTimeout(() => {
+    achievement.classList.remove('visible');
+  }, 4000);
+}
