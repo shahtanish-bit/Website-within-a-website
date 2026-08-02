@@ -50,7 +50,7 @@ const results = [
     url: "waywardarchive.net/catalog",
     title: "The Wayward Archive — waywardarchive.net",
     desc: "A catalog of websites that should not exist. Browse records of lost digital artifacts, ghost URLs, and pages deleted from the public record. Last indexed: ????",
-    link: "the_wayward_archive.html"
+    link: "the_wayward_archive/the_wayward_archive.html"
   },
   {
     url: "community.nexlink.net/forums/thread/0099",
