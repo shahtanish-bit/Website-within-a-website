@@ -13,6 +13,7 @@ body {
 
 
 
+
 .topbar {
   background-color: #2a2118;
   color: #c9b98a;
@@ -60,10 +61,12 @@ body {
 
 
 
+
 .layout {
   display: flex;
   min-height: calc(100vh - 60px);
 }
+
 
 
 
@@ -142,8 +145,6 @@ body {
 }
 
 
-
-
 .records {
   flex: 1;
   padding: 0 48px;
@@ -177,22 +178,14 @@ body {
   margin-bottom: 5px;
 }
 
-.rec-url{
-    font-size: 16px;
-    text-decoration: none;
-    color: #2c1f0e;
-    margin-bottom: 6px;
-    cursor: pointer;
-    transition: color 0.2s;
+.record-body h2 a {
+  color: #1e1a12;
+  text-decoration: none;
 }
 
-.rec-url:hover{
-    color: #8b2000;
-    text-decoration: underline;
-}
-
-.attention {
-    color: #8b2000;
+.record-body h2 a:hover {
+  text-decoration: underline;
+  color: #8b3a3a;
 }
 
 .record-date {
@@ -210,7 +203,6 @@ body {
   max-width: 740px;
   margin-bottom: 12px;
 }
-
 
 
 
