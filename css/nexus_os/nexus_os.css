@@ -1,0 +1,340 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #008080;
+  font-family: 'Courier New', monospace;
+  height: 100vh;
+  overflow: hidden;
+  cursor: default;
+  user-select: none;
+}
+
+
+
+
+.desktop {
+  width: 100%;
+  height: calc(100vh - 36px);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+
+
+
+
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 64px;
+  cursor: pointer;
+  padding: 4px;
+  text-align: center;
+  border: 1px solid transparent;
+}
+
+.icon:hover {
+  background-color: rgba(0, 0, 128, 0.35);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.icon span {
+  font-size: 11px;
+  color: #fff;
+  margin-top: 4px;
+  line-height: 1.3;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.icon-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+
+
+
+.window {
+  position: absolute;
+  top: 80px;
+  left: 120px;
+  width: 420px;
+  background-color: #c0c0c0;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #555;
+  border-bottom: 2px solid #555;
+  box-shadow: 2px 2px 0 #000;
+  z-index: 10;
+}
+
+.window.hidden {
+  display: none;
+}
+
+.window-titlebar {
+  background: linear-gradient(to right, #000080, #1084d0);
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.warning-bar {
+  background: linear-gradient(to right, #800000, #c03030);
+}
+
+.window-close {
+  background-color: #c0c0c0;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #555;
+  border-bottom: 1px solid #555;
+  color: #000;
+  font-size: 10px;
+  width: 16px;
+  height: 14px;
+  cursor: pointer;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.window-close:active {
+  border-top: 1px solid #555;
+  border-left: 1px solid #555;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.window-body {
+  padding: 12px;
+  background-color: #fff;
+  min-height: 140px;
+}
+
+.window-body pre {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: #1a1a1a;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+
+
+
+
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 36px;
+  background-color: #c0c0c0;
+  border-top: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+}
+
+.start-btn {
+  background-color: #c0c0c0;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #555;
+  border-bottom: 2px solid #555;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 10px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.start-btn:active {
+  border-top: 2px solid #555;
+  border-left: 2px solid #555;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.taskbar-right {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: #000;
+  background-color: #c0c0c0;
+  border-top: 1px solid #555;
+  border-left: 1px solid #555;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 3px 8px;
+}
+
+
+
+
+.explorer-body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px 8px;
+  padding: 16px;
+  background-color: #c0c0c0;
+  min-height: 180px;
+}
+
+
+
+
+.file-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  padding: 4px;
+  border: 1px solid transparent;
+}
+
+.file-icon:hover {
+  background-color: rgba(0, 0, 128, 0.25);
+  border-color: rgba(0, 0, 128, 0.4);
+}
+
+.file-icon span {
+  font-size: 10px;
+  font-family: 'Courier New', monospace;
+  color: #000;
+  margin-top: 4px;
+  line-height: 1.3;
+  word-break: break-all;
+}
+
+.file-icon.red-file span {
+  color: #cc0000;
+}
+
+.file-icon-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+
+
+
+
+.window-btn {
+  background-color: #c0c0c0;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #555;
+  border-bottom: 1px solid #555;
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  width: 16px;
+  height: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.window-btn:active {
+  border-top: 1px solid #555;
+  border-left: 1px solid #555;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+
+
+
+
+
+
+.nexus-achievement {
+  position: fixed;
+  top: 14px;
+  right: -340px;
+  background-color: #1a1a1a;
+  border: 1px solid #b8960a;
+  border-radius: 6px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 300px;
+  z-index: 999;
+  transition: right 0.4s ease;
+}
+
+.nexus-achievement.visible {
+  right: 20px;
+}
+
+.nexus-achievement .achievement-icon {
+  font-size: 30px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.nexus-achievement .achievement-label {
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #b8960a;
+  margin-bottom: 4px;
+}
+
+.nexus-achievement .achievement-title {
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  color: #e8e0cc;
+  font-weight: bold;
+}
+
+
+
+
+.dialog-btn {
+  background-color: #c0c0c0;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #555;
+  border-bottom: 2px solid #555;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  padding: 3px 12px;
+  cursor: pointer;
+  color: #000;
+}
+
+.dialog-btn:active {
+  border-top: 2px solid #555;
+  border-left: 2px solid #555;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.dialog-btn-red {
+  color: #cc0000;
+  font-weight: bold;
+}

@@ -1,8 +1,8 @@
-const lines = document.querySelectorAll('#terminal p');
-const title = document.getElementById('title');
-const status = document.getElementById('status');
-const btn = document.getElementById('connect-btn');
-const toast = document.getElementById('toast');
+const lines = document.querySelectorAll("#terminal p");
+const title = document.getElementById("title");
+const status = document.getElementById("status");
+const btn = document.getElementById("connect-btn");
+const toast = document.getElementById("toast");
 
 const LINE_DELAY = 300;
 const TOAST_DELAY_AFTER_LINES = 200;
@@ -11,25 +11,27 @@ const READY_DELAY_AFTER_TOAST = 500;
 
 function revealTerminalLines() {
   lines.forEach((line, i) => {
-    setTimeout(() => { line.style.opacity = '1'; }, i * LINE_DELAY);
+    setTimeout(() => {
+      line.style.opacity = "1";
+    }, i * LINE_DELAY);
   });
   return lines.length * LINE_DELAY;
 }
 
 function showToast() {
-  toast.classList.add('show');
+  toast.classList.add("show");
   setTimeout(hideToast, TOAST_VISIBLE_DURATION);
 }
 
 function hideToast() {
-  toast.classList.remove('show');
+  toast.classList.remove("show");
   setTimeout(showConnectionReady, READY_DELAY_AFTER_TOAST);
 }
 
 function showConnectionReady() {
-  status.textContent = 'CONNECTION READY';
-  title.textContent = '▐ signal acquired ▌';
-  btn.style.opacity = '1';
+  status.textContent = "CONNECTION READY";
+  title.textContent = "▐ signal acquired ▌";
+  btn.style.opacity = "1";
 }
 
 function init() {
@@ -42,97 +44,87 @@ if (toast) init();
 
 
 
-
-
-
-
-
-
 // js for google page
-
 const results = [
   {
     url: "waywardarchive.net/catalog",
     title: "The Wayward Archive — waywardarchive.net",
     desc: "A catalog of websites that should not exist. Browse records of lost digital artifacts, ghost URLs, and pages deleted from the public record. Last indexed: ????",
-    link: "the_wayward_archive/the_wayward_archive.html"
+    link: "the_wayward_archive/the_wayward_archive.html",
   },
   {
     url: "community.nexlink.net/forums/thread/0099",
     title: "Is anyone else receiving this signal? — community.nexlink.net",
     desc: "I keep getting this strange signal through my old modem... it's showing me websites I've never seen before. Does anyone know what ECHO is? Why does every search lead to the same place?",
-    link: ""
+    link: "",
   },
   {
     url: "echo-corp.net/about",
     title: "ECHO Corporation — About Us",
     desc: "ECHO was founded in 2001 with a simple mission: to index what others have missed. Some pages don't want to be found. We find them anyway.",
-    link: ""
+    link: "",
   },
   {
     url: "echo-corp.net/index/[REDACTED]",
     title: "[REDACTED] — Page removed by administrator",
     desc: '<span class="redacted">████████████████████</span> This result has been removed at the request of <span class="redacted">████████████████</span>. If you believe this was done in error, contact <span class="redacted">████████████</span>.',
-    link: "layer3.html"
-  }
+    link: "layer3.html",
+  },
 ];
 
 function showResults(query) {
-  document.getElementById('top').classList.add('shifted');
-  document.getElementById('results-section').classList.remove('hidden');
-  document.getElementById('result-count').textContent = 'About 230 results (0.58 seconds)';
+  document.getElementById("top").classList.add("shifted");
+  document.getElementById("results-section").classList.remove("hidden");
+  document.getElementById("result-count").textContent =
+    "About 230 results (0.58 seconds)";
 
-  const list = document.getElementById('results-list');
-  list.innerHTML = '';
+  const list = document.getElementById("results-list");
+  list.innerHTML = "";
 
-  results.forEach(r => {
-    const item = document.createElement('div');
+  results.forEach((r) => {
+    const item = document.createElement("div");
     item.innerHTML = `
       <p class="result-url">${r.url}</p>
-      <a class="result-title" href="${r.link || '#'}">${r.title}</a>
+      <a class="result-title" href="${r.link || "#"}">${r.title}</a>
       <p class="result-desc">${r.desc}</p>
     `;
     list.appendChild(item);
   });
 }
 
-const searchBtn = document.getElementById('search-btn');
-const searchInput = document.getElementById('search-input');
+const searchBtn = document.getElementById("search-btn");
+const searchInput = document.getElementById("search-input");
 
 if (searchBtn) {
-  searchBtn.addEventListener('click', () => {
+  searchBtn.addEventListener("click", () => {
     const q = searchInput.value.trim();
     if (q) showResults(q);
   });
 }
 
 if (searchInput) {
-  searchInput.addEventListener('keydown', e => {
-    if (e.key === 'Enter' && e.target.value.trim()) showResults(e.target.value.trim());
+  searchInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && e.target.value.trim())
+      showResults(e.target.value.trim());
   });
 }
 
 
 
 
-
-
-
 // for da error popupp on the archive web
-
-const classifiedFile = document.querySelector('.classified-file');
-const classifiedRecord = document.getElementById('classified-record');
-const records = document.querySelector('.records');
-const achievement = document.getElementById('achievement');
+const classifiedFile = document.querySelector(".classified-file");
+const classifiedRecord = document.getElementById("classified-record");
+const records = document.querySelector(".records");
+const achievement = document.getElementById("achievement");
 
 let achievementTimer = null;
 
 if (classifiedFile) {
-  classifiedFile.addEventListener('click', () => {
-
+  classifiedFile.addEventListener("click", () => {
     const clone = classifiedRecord.cloneNode(true);
-    clone.classList.remove('hidden');
-    clone.removeAttribute('id');
+    clone.classList.remove("hidden");
+    clone.removeAttribute("id");
     records.insertBefore(clone, records.firstChild);
 
     showAchievement();
@@ -142,9 +134,57 @@ if (classifiedFile) {
 function showAchievement() {
   if (achievementTimer) clearTimeout(achievementTimer);
 
-  achievement.classList.add('visible');
+  achievement.classList.add("visible");
 
   achievementTimer = setTimeout(() => {
-    achievement.classList.remove('visible');
+    achievement.classList.remove("visible");
   }, 4000);
 }
+
+
+
+
+
+
+// for the nexus thing
+let toastTimer = null;
+
+    function showToast(id) {
+      // itll hide the currently achivement first (smart ik😎😎)
+      document.querySelectorAll('.nexus-achievement').forEach(t => t.classList.remove('visible'));
+      if (toastTimer) clearTimeout(toastTimer);
+
+      const toast = document.getElementById(id);
+      toast.classList.add('visible');
+      toastTimer = setTimeout(() => toast.classList.remove('visible'), 4000);
+    }
+
+    function openRecycleBin() {
+      showToast('nexus-achievement');
+    }
+
+    function openMyComputer() {
+      document.getElementById('mycomputer-window').classList.remove('hidden');
+    }
+
+    function openReadme() {
+      document.getElementById('readme-window').classList.remove('hidden');
+    }
+
+    function openWarning() {
+      document.getElementById('warning-window').classList.remove('hidden');
+    }
+
+    function closeWindow(id) {
+      document.getElementById(id).classList.add('hidden');
+    }
+
+    function updateClock() {
+      const now = new Date();
+      const h = String(now.getHours()).padStart(2, '0');
+      const m = String(now.getMinutes()).padStart(2, '0');
+      document.getElementById('taskbar-time').textContent = h + ':' + m;
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000);

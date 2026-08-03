@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXUS Operating System</title>
+  <link rel="stylesheet" href="../css/nexus_os/nexus_os.css" />
+</head>
+<body>
+
+  <!-- desktop -->
+  <div class="desktop">
+
+    <div class="icon" ondblclick="openMyComputer()">
+      <img class="icon-img" src="../img/my_computer.png" alt="My Computer" />
+      <span>My Computer</span>
+    </div>
+
+    <div class="icon" ondblclick="openReadme()">
+      <img class="icon-img" src="../img/readme.png" alt="README.TXT" />
+      <span>README.TXT</span>
+    </div>
+
+    <div class="icon" ondblclick="openWarning()">
+      <img class="icon-img" src="../img/Warning.png" alt="???" />
+      <span>???</span>
+    </div>
+
+    <div class="icon" ondblclick="openRecycleBin()">
+      <img class="icon-img" src="../img/recycle_bin.png" alt="Recycle Bin" />
+      <span>Recycle<br>Bin</span>
+    </div>
+
+  </div>
+
+
+
+
+  <!-- codee for my computer window -->
+  <div id="mycomputer-window" class="window hidden" style="top: 60px; left: 80px; width: 500px;">
+    <div class="window-titlebar">
+      <span><img src="../img/my_computer.png" style="width:14px; height:14px; vertical-align:middle; margin-right:5px; image-rendering:pixelated;">My Computer</span>
+      <div style="display:flex; gap:2px;">
+        <button class="window-btn" onclick="closeWindow('mycomputer-window')">_</button>
+        <button class="window-btn" onclick="closeWindow('mycomputer-window')">x</button>
+      </div>
+    </div>
+    <div class="window-body explorer-body">
+
+      <div class="file-icon" ondblclick="showToast('toast-empty')">
+        <img class="file-icon-img" src="../img/file.png" alt="SYSTEM" />
+        <span>SYSTEM</span>
+      </div>
+
+      <div class="file-icon" ondblclick="showToast('toast-empty')">
+        <img class="file-icon-img" src="../img/file.png" alt="NEXUS_DATA" />
+        <span>NEXUS_DATA</span>
+      </div>
+
+      <div class="file-icon red-file" ondblclick="showToast('toast-empty')">
+        <img class="file-icon-img" src="../img/file.png" alt="LATTICE_v0" />
+        <span>LATTICE_v0</span>
+      </div>
+
+      <div class="file-icon" ondblclick="openReadme()">
+        <img class="file-icon-img" src="../img/readme_in_my_computer.png" alt="README.TXT" />
+        <span>README.TXT</span>
+      </div>
+
+      <div class="file-icon red-file" ondblclick="openWarning()">
+        <img class="file-icon-img" src="../img/anomaly.png" alt="ANOMALY.DAT" />
+        <span>ANOMALY.DAT</span>
+      </div>
+
+      <div class="file-icon" ondblclick="showToast('toast-empty')">
+        <img class="file-icon-img" src="../img/file.png" alt="BACKUP_97" />
+        <span>BACKUP_97</span>
+      </div>
+
+      <div class="file-icon" ondblclick="showToast('toast-empty')">
+        <img class="file-icon-img" src="../img/file.png" alt="TEMP" />
+        <span>TEMP</span>
+      </div>
+
+      <div class="file-icon" ondblclick="showToast('toast-denied')">
+        <img class="file-icon-img" src="../img/classified.png" alt="CLASSIFIED" />
+        <span>CLASSIFIED</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- readme window -->
+  <div id="readme-window" class="window hidden" style="top: 90px; left: 200px;">
+    <div class="window-titlebar">
+      <span>📄 README.TXT</span>
+      <button class="window-btn" onclick="closeWindow('readme-window')">x</button>
+    </div>
+    <div class="window-body" style="background:#c0c0c0; padding: 12px;">
+      <pre style="font-family:'Courier New',monospace; font-size:12px; font-weight:500; color:#000; line-height:1.6;">NEXUS INTERNAL SYSTEMS — README.TXT
+==============================
+Last modified: 04/14/1997 by admin_m
+
+WARNING: You are accessing a restricted internal
+network.
+This intranet is the property of NEXUS Corporation.
+
+If you are reading this, you may have received a
+broadcast from our signal relay. We are aware of the
+anomaly. Do NOT access the LATTICE folder.
+
+The social network was a mistake.
+We gave it too much of the employee data.
+It started... connecting things on its own.
+
+If you find the ANOMALY.DAT file, delete it.
+Do NOT open it.
+
+— Admin M
+(last login: Sep 03, 2001)
+(account status: INACTIVE)</pre>
+    </div>
+  </div>
+
+
+  
+
+  <div id="warning-window" class="window hidden" style="top: 88px; left: 170px; width: 260px;">
+    <div class="window-titlebar warning-bar">
+      <span>⚠ ANOMALY DETECTED</span>
+      <button class="window-btn" onclick="closeWindow('warning-window')">x</button>
+    </div>
+    <div class="window-body" style="background:#c0c0c0; padding:12px;">
+      <p style="font-family:'Courier New',monospace; font-size:11px; color:#000; line-height:1.6; margin-bottom:14px;">ANOMALY.DAT — NEXUS CORP. INTERNAL FILE File was created: September 3, 2001 at 23:47 File was modified: CONTINUOUSLY File size: UNKNOWN This file contains a reference to an external network that does not appear in any NEXUS documentation. Network appears to contain: websites. Multiple websites. Nested inside each other. Attempting to trace origin... ... ... Origin: INSIDE THIS FILE. The file contains a website. The website contains a file. The file contains a website. Do you want to open this file?</p>
+      <div style="display:flex; justify-content:flex-end; gap:6px;">
+        <button class="dialog-btn" onclick="closeWindow('warning-window')">Ignore</button>
+        <button class="dialog-btn dialog-btn-red" onclick="closeWindow('warning-window')">OPEN FILE</button>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+
+  <!-- achivementsss -->
+  <div id="nexus-achievement" class="nexus-achievement">
+    <span class="achievement-icon">🏆</span>
+    <div class="achievement-text">
+      <p class="achievement-label">Recycle Bin</p>
+      <p class="achievement-title">Empty. Or is it?</p>
+    </div>
+  </div>
+
+  <div id="toast-empty" class="nexus-achievement">
+    <span class="achievement-icon">🏆</span>
+    <div class="achievement-text">
+      <p class="achievement-label">Empty Folder</p>
+      <p class="achievement-title">Nothing here.</p>
+    </div>
+  </div>
+
+  <div id="toast-denied" class="nexus-achievement">
+    <span class="achievement-icon">🏆</span>
+    <div class="achievement-text">
+      <p class="achievement-label">ACCESS DENIED</p>
+      <p class="achievement-title">You do not have permission.</p>
+    </div>
+  </div>
+
+
+  
+
+
+
+  <div class="taskbar">
+    <button class="start-btn">&#9658; NEXUS</button>
+    <div class="taskbar-right">
+      <span id="taskbar-time"></span>
+    </div>
+  </div>
+
+  <script src="../app.js"></script>
+
+</body>
+</html>
