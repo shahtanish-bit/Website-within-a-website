@@ -298,6 +298,20 @@ body {
   line-height: 1.2;
 }
 
+.record-desc-important{
+  font-size: 14px;
+  line-height: 1.65;
+  color: #ff0000;
+  padding: 1px 5px;
+  background-color: #000000ed;
+  /* text-decoration: underline; */
+  max-width: 740px;
+  margin-bottom: 12px;
+}
+
+
+
+
 .tag.active-tag {
   background-color: #aecab4;
   color: #1e4030;

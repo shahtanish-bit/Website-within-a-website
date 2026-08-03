@@ -291,6 +291,21 @@ body {
   line-height: 1.2;
 }
 
+
+/* added this to sacre the shit outta ppl on this website 😛😛 like is says " you have already been found" in a dam scarry way (kinda thingking again cuz now i have to change all the files butt ehhh ill do it anyway its worth a shot)*/
+.record-desc-important{
+  font-size: 14px;
+  line-height: 1.65;
+  color: #ff0000;
+  padding: 1px 5px;
+  background-color: #000000ed;
+  /* text-decoration: underline; */
+  max-width: 740px;
+  margin-bottom: 12px;
+}
+
+
+
 .tag.active-tag {
   background-color: #aecab4;
   color: #1e4030;
