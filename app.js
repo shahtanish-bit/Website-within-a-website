@@ -18,7 +18,7 @@ function revealTerminalLines() {
   return lines.length * LINE_DELAY;
 }
 
-function showToast() {
+function showConnectToast() {
   toast.classList.add("show");
   setTimeout(hideToast, TOAST_VISIBLE_DURATION);
 }
@@ -36,7 +36,7 @@ function showConnectionReady() {
 
 function init() {
   const linesFinishedAt = revealTerminalLines();
-  setTimeout(showToast, linesFinishedAt + TOAST_DELAY_AFTER_LINES);
+  setTimeout(showConnectToast, linesFinishedAt + TOAST_DELAY_AFTER_LINES);
 }
 
 if (toast) init();
