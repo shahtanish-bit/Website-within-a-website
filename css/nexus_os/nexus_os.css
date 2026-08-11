@@ -338,3 +338,42 @@ body {
   color: #cc0000;
   font-weight: bold;
 }
+
+
+
+
+
+
+
+.start-menu {
+  position: fixed;
+  bottom: 36px;
+  left: 0;
+  width: 180px;
+  background-color: #c0c0c0;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #555;
+  border-bottom: 2px solid #555;
+  padding: 3px;
+  z-index: 20;
+}
+
+.start-menu.hidden {
+  display: none;
+}
+
+.start-item {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  padding: 6px 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.start-item:hover {
+  background-color: #000080;
+  color: #fff;
+}

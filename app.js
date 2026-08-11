@@ -147,16 +147,45 @@ function showAchievement() {
 
 
 // for the nexus thing
-let toastTimer = null;
+function toggleStartMenu() {
+      const menu = document.getElementById('start-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    function closeStartMenu() {
+      document.getElementById('start-menu').classList.add('hidden');
+    }
+
+    function openAbout() {
+      showToast('toast-about');
+    }
+
+    function shutDown() {
+      window.location.href = '../lattice_social/lattice_social.html';
+      closeStartMenu();
+    }
+
+
+    document.addEventListener('click', (e) => {
+      const menu = document.getElementById('start-menu');
+      const btn = document.querySelector('.start-btn');
+      if (!menu.contains(e.target) && e.target !== btn) {
+        menu.classList.add('hidden');
+      }
+    });
+
+    
+
+    let toastTimer = null;
 
     function showToast(id) {
-      // itll hide the currently achivement first (smart ik😎😎)
+      // hide any currently visible toast first (ik im smart 😼😼)
       document.querySelectorAll('.nexus-achievement').forEach(t => t.classList.remove('visible'));
       if (toastTimer) clearTimeout(toastTimer);
 
       const toast = document.getElementById(id);
       toast.classList.add('visible');
-      toastTimer = setTimeout(() => toast.classList.remove('visible'), 4000);
+      toastTimer = setTimeout(() => toast.classList.remove('visible'), 7000);
     }
 
     function openRecycleBin() {

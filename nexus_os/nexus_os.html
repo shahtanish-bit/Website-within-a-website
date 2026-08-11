@@ -168,17 +168,61 @@ Do NOT open it.
     </div>
   </div>
 
-
+  <div id="toast-about" class="nexus-achievement">
+    <span class="achievement-icon">🏆</span>
+    <div class="achievement-text">
+      <p class="achievement-label">NEXUS OS v1.97</p>
+      <p class="achievement-title">nexus is a fake os gng i made wht u expected when u clicked on 'about nexus'</p>
+    </div>
+  </div>
   
 
 
 
   <div class="taskbar">
-    <button class="start-btn">&#9658; NEXUS</button>
+    <button class="start-btn" onclick="toggleStartMenu()">&#9658; NEXUS</button>
     <div class="taskbar-right">
       <span id="taskbar-time"></span>
     </div>
   </div>
+
+
+
+  <!-- shut down thing menuu -->
+  <div id="start-menu" class="start-menu hidden">
+    <div class="start-item" onclick="openMyComputer(); closeStartMenu()">
+      <span class="start-item-icon">▶</span> Documents
+    </div>
+    <div class="start-item" onclick="openAbout(); closeStartMenu()">
+      <span class="start-item-icon">🖥</span> About NEXUS
+    </div>
+    <div class="start-item" onclick="shutDown()">
+      <span class="start-item-icon">⏻</span> Shut Down
+    </div>
+  </div>
+
+  <!-- about nexus window -->
+  <div id="about-window" class="window hidden" style="top: 120px; left: 200px; width: 280px;">
+    <div class="window-titlebar">
+      <span>About NEXUS</span>
+      <button class="window-btn" onclick="closeWindow('about-window')">x</button>
+    </div>
+    <div class="window-body" style="background:#c0c0c0; padding:14px;">
+      <pre style="font-family:'Courier New',monospace; font-size:11px; color:#000; line-height:1.6; white-space:pre-wrap;">NEXUS Operating System
+Version 4.1.1 (Build 970414)
+
+NEXUS Corporation
+Internal Distribution Only
+
+This system has been running since 1997.
+Current uptime: UNKNOWN
+Last user: admin_m
+Last login: Sep 03, 2001
+
+This machine should not be online.</pre>
+    </div>
+  </div>
+
 
   <script src="../app.js"></script>
 
