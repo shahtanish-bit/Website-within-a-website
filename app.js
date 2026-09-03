@@ -217,3 +217,25 @@ function toggleStartMenu() {
 
     updateClock();
     setInterval(updateClock, 1000);
+
+
+
+
+
+
+
+
+// for the error popup aftr u click on confidential in way acrchive
+    function triggerClassifiedPopup(e) {
+  e.preventDefault();
+
+  const classifiedRecord = document.getElementById('classified-record');
+  const records = document.querySelector('.records');
+
+  const clone = classifiedRecord.cloneNode(true);
+  clone.classList.remove('hidden');
+  clone.removeAttribute('id');
+  records.insertBefore(clone, records.firstChild);
+
+  showAchievement();
+}
