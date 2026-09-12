@@ -306,3 +306,12 @@ body {
   color: #7b6fd4;
   text-decoration: underline;
 }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+
+.post-link {
+  animation: blink 1.4s ease-in-out infinite;
+}

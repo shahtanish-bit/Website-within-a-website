@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXLINK Forums</title>
+  <link rel="stylesheet" href="../css/NEXLINK FORUMS/nexlink_forums.css" />
+</head>
+<body>
+
+
+  <header class="site-header">
+    <div class="header-title">
+      <span class="header-bolt">⚡</span>
+      <div>
+        <h1>NEXLINK FORUMS</h1>
+        <p class="header-sub">Community · Est. 2001 · 3 members online</p>
+      </div>
+    </div>
+  </header>
+
+
+  <nav class="tabs">
+    <a href="#" class="tab active">General Discussion</a>
+    <a href="#" class="tab">Tech Help</a>
+    <a href="#" class="tab">Off Topic</a>
+    <a href="#" class="tab">??</a>
+  </nav>
+
+
+  <main class="forum-body">
+    <table class="thread-table">
+      <thead>
+        <tr>
+          <th class="col-thread">THREAD</th>
+          <th class="col-author">AUTHOR</th>
+          <th class="col-num">REPLIES</th>
+          <th class="col-num">VIEWS</th>
+          <th class="col-date">LAST POST</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="thread-row">
+          <td class="thread-title">
+            <a href="javascript:void(0)" onclick="openThread('t1')">Anyone else getting slow speeds tonight?</a>
+          </td>
+          <td class="thread-author">techguy88</td>
+          <td class="thread-num">14</td>
+          <td class="thread-num">230</td>
+          <td class="thread-date">Nov 12, 2003</td>
+        </tr>
+
+        <tr class="thread-row pinned-row">
+          <td class="thread-title">
+            <span class="badge-pinned">PINNED</span>
+            <span class="lock-icon">🔒</span>
+            <a href="javascript:void(0)" onclick="openThread('t2')">STICKY: Forum Rules — Please Read Before Posting</a>
+            <p class="thread-locked">This thread is locked.</p>
+          </td>
+          <td class="thread-author">Moderator_K</td>
+          <td class="thread-num">0</td>
+          <td class="thread-num">4,821</td>
+          <td class="thread-date">Jan 01, 2001</td>
+        </tr>
+
+        <tr class="thread-row">
+          <td class="thread-title">
+            <a href="javascript:void(0)" onclick="openThread('t3')">Cool new website I found — kind of strange</a>
+          </td>
+          <td class="thread-author">lurker_99</td>
+          <td class="thread-num">22</td>
+          <td class="thread-num">891</td>
+          <td class="thread-date">Nov 13, 2003</td>
+        </tr>
+
+        <tr class="thread-row locked-row">
+          <td class="thread-title">
+            <span class="lock-icon">🔒</span>
+            <a href="javascript:void(0)" onclick="openThread('t4')">[LOCKED] I think I found something — do NOT click this link</a>
+            <p class="thread-locked">This thread is locked.</p>
+          </td>
+          <td class="thread-author">quietharbor</td>
+          <td class="thread-num">3</td>
+          <td class="thread-num">12,048</td>
+          <td class="thread-date">Nov 14, 2003</td>
+        </tr>
+
+        <tr class="thread-row">
+          <td class="thread-title">
+            <a href="javascript:void(0)" onclick="openThread('t5')">Favorite websites of 2003?</a>
+          </td>
+          <td class="thread-author">webmaster_j</td>
+          <td class="thread-num">41</td>
+          <td class="thread-num">1,203</td>
+          <td class="thread-date">Nov 10, 2003</td>
+        </tr>
+
+        <tr class="thread-row locked-row">
+          <td class="thread-title">
+            <span class="lock-icon">🔒</span>
+            <a href="javascript:void(0)" onclick="openThread('t6')">Is NEXUS down for anyone else?</a>
+            <p class="thread-locked">This thread is locked.</p>
+          </td>
+          <td class="thread-author">devnull_x</td>
+          <td class="thread-num">7</td>
+          <td class="thread-num">3,312</td>
+          <td class="thread-date">Sep 04, 2001</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+
+
+
+    <!--thread views-->
+
+    <!-- t1: Anyone else getting slow speeds tonight? -->
+    <div id="t1" class="thread-view hidden">
+      <a href="javascript:void(0)" class="back-link" onclick="closeThread('t1')">← Back to threads</a>
+      <h2 class="thread-view-title">Anyone else getting slow speeds tonight?</h2>
+      <div class="thread-posts">
+        <p class="no-posts">No posts in this thread yet.</p>
+      </div>
+      <div class="reply-box">
+        <textarea placeholder="Add a reply..."></textarea>
+        <button class="post-btn" onclick="postReply('t1')">Post Reply</button>
+      </div>
+    </div>
+
+    <!-- t2: STICKY (locked) -->
+    <div id="t2" class="thread-view hidden">
+      <a href="javascript:void(0)" class="back-link" onclick="closeThread('t2')">← Back to threads</a>
+      <h2 class="thread-view-title">STICKY: Forum Rules — Please Read Before Posting</h2>
+      <div class="thread-posts">
+        <p class="no-posts">No posts in this thread yet.</p>
+      </div>
+      <div class="locked-notice">🔒 This thread is locked. You cannot reply.</div>
+      <div class="reply-box">
+        <textarea placeholder="Add a reply..." disabled></textarea>
+        <button class="post-btn">Post Reply</button>
+      </div>
+    </div>
+
+    <!-- t3: Cool new website I found -->
+    <div id="t3" class="thread-view hidden">
+      <a href="javascript:void(0)" class="back-link" onclick="closeThread('t3')">← Back to threads</a>
+      <h2 class="thread-view-title">Cool new website I found — kind of strange</h2>
+      <div class="thread-posts">
+        <p class="no-posts">No posts in this thread yet.</p>
+      </div>
+      <div class="reply-box">
+        <textarea placeholder="Add a reply..."></textarea>
+        <button class="post-btn" onclick="postReply('t3')">Post Reply</button>
+      </div>
+    </div>
+
+    <!-- t4: [LOCKED] I think I found something — scrollable, has posts -->
+    <div id="t4" class="thread-view hidden scrollable">
+      <a href="javascript:void(0)" class="back-link" onclick="closeThread('t4')">← Back to threads</a>
+      <h2 class="thread-view-title">[LOCKED] I think I found something — do NOT click this link</h2>
+      <div class="thread-posts">
+
+        <div class="post-entry">
+          <div class="post-user">
+            <p class="post-username">quietharbor</p>
+            <p class="post-rank">Member</p>
+            <div class="post-avatar">🌊</div>
+            <p class="post-count">Posts: 247</p>
+          </div>
+          <div class="post-content">
+            <p class="post-meta">Posted: Nov 14, 2003, 02:18 AM</p>
+            <p>ok so this is going to sound weird but I found a website that contains another website that contains another website. I've been going for about 2 hours now and I don't know how deep it goes.</p>
+            <br>
+            <p>I'm going to keep going. I'll report back.</p>
+            <p class="post-sig">curious by nature, lost by choice</p>
+          </div>
+        </div>
+
+        <div class="post-entry">
+          <div class="post-user">
+            <p class="post-username">techguy88</p>
+            <p class="post-rank">Regular</p>
+            <div class="post-avatar">💻</div>
+            <p class="post-count">Posts: 1402</p>
+          </div>
+          <div class="post-content">
+            <p class="post-meta">Posted: Nov 14, 2003, 02:31 AM</p>
+            <p>lol ok sure man</p>
+            <br>
+            <p>link?</p>
+            <p class="post-sig">dell dimension 4100 | IE 6.0 | AOL dial-up</p>
+          </div>
+        </div>
+
+        <div class="post-entry">
+          <div class="post-user">
+            <p class="post-username">quietharbor</p>
+            <p class="post-rank">Member</p>
+            <div class="post-avatar">🌊</div>
+            <p class="post-count">Posts: 247</p>
+          </div>
+          <div class="post-content">
+            <p class="post-meta">Posted: Nov 14, 2003, 02:44 AM</p>
+            <p class="post-red">I'm at layer 7 now. There's a room. There are screens everywhere. I can see the websites I came from on the screens. I'm looking for the door.</p>
+            <br>
+            <p class="post-red">If you go in: look for the garden. The garden is the end. Or the beginning.</p>
+            <br>
+            <p class="post-red">I'm going to find out which one.</p>
+            <p class="post-sig">curious by nature, lost by choice</p>
+          </div>
+        </div>
+
+        <div class="post-entry">
+          <div class="post-user">
+            <p class="post-username">Moderator_K</p>
+            <p class="post-rank">[ MODERATOR ]</p>
+            <div class="post-avatar">🔑</div>
+            <p class="post-count">Posts: 8831</p>
+          </div>
+          <div class="post-content">
+            <p class="post-meta">Posted: Nov 14, 2003, 02:58 AM</p>
+            <p><strong>THREAD LOCKED</strong></p>
+            <br>
+            <p>This thread contains a hazard. Do not follow links posted here.</p>
+            <br>
+            <p>User "quietharbor" has been suspended pending investigation.</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="thread-continue">→ Continue to Museum of the Digital Sublime</div>
+      <div class="reply-box">
+        <textarea placeholder="Add a reply..."></textarea>
+        <button class="post-btn" onclick="postReply('t4')">Post Reply</button>
+      </div>
+    </div>
+
+    <!-- t5: Favorite websites of 2003? -->
+    <div id="t5" class="thread-view hidden">
+      <a href="javascript:void(0)" class="back-link" onclick="closeThread('t5')">← Back to threads</a>
+      <h2 class="thread-view-title">Favorite websites of 2003?</h2>
+      <div class="thread-posts">
+        <p class="no-posts">No posts in this thread yet.</p>
+      </div>
+      <div class="reply-box">
+        <textarea placeholder="Add a reply..."></textarea>
+        <button class="post-btn" onclick="postReply('t5')">Post Reply</button>
+      </div>
+    </div>
+
+    <!-- t6: Is NEXUS down (locked) -->
+    <div id="t6" class="thread-view hidden">
+      <a href="javascript:void(0)" class="back-link" onclick="closeThread('t6')">← Back to threads</a>
+      <h2 class="thread-view-title">Is NEXUS down for anyone else?</h2>
+      <div class="thread-posts">
+        <p class="no-posts">No posts in this thread yet.</p>
+      </div>
+      <div class="locked-notice">🔒 This thread is locked. You cannot reply.</div>
+      <div class="reply-box">
+        <textarea placeholder="Add a reply..."></textarea>
+        <button class="post-btn" onclick="postReply('t6')">Post Reply</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="../app.js"></script>
+
+</body>
+</html>

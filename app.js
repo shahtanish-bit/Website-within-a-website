@@ -239,3 +239,99 @@ function toggleStartMenu() {
 
   showAchievement();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// for nexlink forums
+
+function openThread(id) {
+  document.querySelectorAll('.thread-view').forEach(t => t.classList.add('hidden'));
+  const el = document.getElementById(id);
+  el.classList.remove('hidden');
+  setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 50);
+}
+
+function closeThread(id) {
+  document.getElementById(id).classList.add('hidden');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+
+
+
+function closeThread(id) {
+  document.getElementById(id).classList.add('hidden');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function postReply(threadId) {
+  const view = document.getElementById(threadId);
+  const textarea = view.querySelector('textarea');
+  const text = textarea.value.trim();
+  if (!text) return;
+
+  const posts = view.querySelector('.thread-posts');
+  const noPostsMsg = posts.querySelector('.no-posts');
+  if (noPostsMsg) noPostsMsg.remove();
+
+  // get current time
+  const now = new Date();
+  const dateStr = now.toLocaleDateString('en-GB').replace(/\//g, '/');
+  const timeStr = now.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+  // guest post
+  const guestPost = document.createElement('div');
+  guestPost.classList.add('post-entry');
+  guestPost.innerHTML = `
+    <div class="post-user">
+      <p class="post-username">guest_user</p>
+      <p class="post-rank">New Member</p>
+      <div class="post-avatar">👤</div>
+      <p class="post-count">Posts: 1</p>
+    </div>
+    <div class="post-content">
+      <p class="post-meta">Posted: ${dateStr}, ${timeStr}</p>
+      <p>${text}</p>
+    </div>
+  `;
+  posts.appendChild(guestPost);
+  textarea.value = '';
+  guestPost.scrollIntoView({ behavior: 'smooth' });
+
+  // quietharbor auto-reply after 2 seconds
+  setTimeout(() => {
+    const reply = document.createElement('div');
+    reply.classList.add('post-entry');
+    reply.innerHTML = `
+      <div class="post-user">
+        <p class="post-username">quietharbor</p>
+        <p class="post-rank">[ SUSPENDED ]</p>
+        <div class="post-avatar">🌊</div>
+        <p class="post-count">Posts: 247</p>
+      </div>
+      <div class="post-content">
+        <p class="post-meta">Posted: just now — [THIS USER IS SUSPENDED. THIS POST SHOULD NOT BE VISIBLE.]</p>
+        <p class="post-red">You found this. That means you're already in it.</p>
+        <p class="post-red">Keep going. The garden is real.</p>
+        <br>
+        <a href="javascript:void(0)" class="post-link-red">→ Continue deeper</a>
+      </div>
+    `;
+    posts.appendChild(reply);
+    reply.scrollIntoView({ behavior: 'smooth' });
+  }, 2000);
+}
