@@ -43,7 +43,6 @@ if (toast) init();
 
 
 
-
 // js for google page
 const results = [
   {
@@ -53,10 +52,10 @@ const results = [
     link: "the_wayward_archive/the_wayward_archive.html",
   },
   {
-    url: "community.nexlink.net/forums/thread/0099",
-    title: "Is anyone else receiving this signal? — community.nexlink.net",
-    desc: "I keep getting this strange signal through my old modem... it's showing me websites I've never seen before. Does anyone know what ECHO is? Why does every search lead to the same place?",
-    link: "",
+    url: "Goth baddies-hub",
+    title: "did baddie steal my Codebase!!? — goth baddies-hub.com",
+    desc: "the way she stole my heart was like cloning a repo like she a created a branch aside main which i thought we would be working on forever. I cloned her heart with SSH, thinking I had access. She revoked my key and said 'permission denied (publickey).'",
+    link: "github-clone/goth baddies-hub.html",
   },
   {
     url: "echo-corp.net/about",
