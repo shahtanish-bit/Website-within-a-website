@@ -17,3 +17,89 @@ body {
     align-items: center;
     padding: 0 20px;
 }
+
+.logo{
+    color: #dce4df;
+    font-weight: bold; 
+}
+
+.status {
+    margin-left: 30px;
+    color: #8b9690;
+    font-size: 12px;
+}
+
+.command {
+    margin-left: auto;
+    color: #69736e;
+    font-size: 12px;
+}
+
+.profile{
+    margin-left: 20px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #3b4540;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar{
+    position: fixed;
+    left: 0;
+    top: 55px;
+    width: 55px;
+    bottom: 0;
+    border-right: 1px solid #28302c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    gap: 25px;
+}
+
+.side-icon{
+    color: #707b75;
+    font-size: 18px;
+}
+
+.main-content{
+    margin-left: 55px;
+    padding: 45px 35px;
+}
+
+.subtitle{
+    color: #68736d;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.main-content h1{
+    color: #e1e7e3;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+
+.vaults {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.vault-card {
+    border: 1px solid #29312d;
+    background: #0c100e;
+    padding: 20px;
+    min-height: 145px;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
