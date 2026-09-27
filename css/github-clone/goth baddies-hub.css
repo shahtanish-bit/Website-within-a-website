@@ -18,9 +18,9 @@ body {
     padding: 0 20px;
 }
 
-.logo{
-    color: #dce4df;
-    font-weight: bold; 
+.logo {
+    color: #39ff9b;
+    font-weight: bold;
 }
 
 .status {
@@ -67,8 +67,8 @@ body {
 
 .main-content {
     margin-left: 59px;
-    margin-right: 300px;
-    padding: 25px 0 40px 204px;
+    margin-right: 405px;
+    padding: 25px 0 40px 100px;
 }
 
 .subtitle{
@@ -88,14 +88,15 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
-    width: 847px;
+    width: 100%;
+    max-width: 847px;
 }
 
 .vault-card {
-    border: 1px solid #29312d;
-    background: #0c100e;
-    padding: 20px;
-    min-height: 125px;
+    border: 1px solid #193a2a;
+    background: #08110d;
+    padding: 18px;
+    min-height: 130px;
 }
 
 .vault-card:hover {
@@ -110,9 +111,9 @@ body {
     margin-bottom: 15px;
 }
 
-.card-header h2{
+.card-header h2 {
     font-size: 16px;
-    color: #dce3df;
+    color: #39ff9b;
 }
 
 .card-header span{
@@ -126,18 +127,19 @@ body {
     margin-bottom: 20px;
 }
 
-.card-info{
-    display:flex;
-    gap: 15px;
-    color: #626d67;
+.card-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #52665c;
     font-size: 11px;
 }
 
 .right-panel {
     position: absolute;
-    right: 35px;
-    top: 130px;
-    width: 220px;
+    right: 100px;
+    top: 161px;
+    width: 303px;
 }
 
 .save-streak {
