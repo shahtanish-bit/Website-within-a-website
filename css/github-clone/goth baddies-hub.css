@@ -93,6 +93,7 @@ body {
 }
 
 .vault-card {
+    text-decoration: none;
     border: 1px solid #193a2a;
     background: #08110d;
     padding: 18px;

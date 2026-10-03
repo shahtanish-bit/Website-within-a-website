@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    background: #050807;
+    color: #dce5df;
+    font-family: monospace;
+}
+
+
+
+
+
+
+
+
+.top-bar {
+    height: 55px;
+    border-bottom: 1px solid #1c2923;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.logo {
+    color: #42f59b;
+    font-weight: bold;
+}
+
+.status {
+    color: #68776f;
+    margin-left: 30px;
+}
+
+.command {
+    color: #53665c;
+    margin-left: auto;
+}
+
+.profile {
+    margin-left: 25px;
+    border: 1px solid #304039;
+    padding: 7px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 55px;
+    width: 55px;
+    height: calc(100vh - 55px);
+    border-right: 1px solid #1c2923;
+    text-align: center;
+}
+
+.side-icon {
+    padding: 20px 0;
+    color: #68776f;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.vault-page {
+    margin-left: 55px;
+    padding: 45px 80px;
+}
+
+.subtitle {
+    color: #53665c;
+    font-size: 14px;
+}
+
+.vault-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.vault-title h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.vault-title span {
+    border: 1px solid #304039;
+    padding: 5px 9px;
+    color: #68776f;
+    font-size: 13px;
+}
+
+.description {
+    color: #89978f;
+    margin-top: 20px;
+}
+
+.vault-info {
+    display: flex;
+    gap: 20px;
+    color: #53665c;
+    padding: 18px 0;
+    border-bottom: 1px solid #1c2923;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.readme,
+.files {
+    width: 70%;
+    border: 1px solid #26352e;
+    background: #070d0a;
+    padding: 22px;
+    margin-top: 25px;
+    box-sizing: border-box;
+}
+
+.readme h2,
+.files h2 {
+    color: #42f59b;
+    font-size: 17px;
+    margin-top: 0;
+}
+
+.readme p,
+.files p {
+    color: #89978f;
+    font-size: 14px;
+}
+
+.files p {
+    border-bottom: 1px solid #18231f;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.vault-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.vault-buttons button,
+.vault-buttons a {
+    background: #07100c;
+    color: #89978f;
+    border: 1px solid #304039;
+    padding: 10px 16px;
+    font-family: inherit;
+    font-size: 13px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.vault-buttons button:hover,
+.vault-buttons a:hover {
+    color: #42f59b;
+    border-color: #42f59b;
+}
